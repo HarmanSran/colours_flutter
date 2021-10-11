@@ -1,5 +1,6 @@
 import 'package:colours_flutter/models/dastar.dart';
 import 'package:colours_flutter/models/dastar_data.dart';
+import 'package:colours_flutter/widgets/dastar_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -20,17 +21,10 @@ class DastarsGrid extends StatelessWidget {
             itemCount: dastarData.dastarCount,
             itemBuilder: (BuildContext context, index) {
               Dastar dastar = dastarData.dastars[index];
-              String larhs = dastar.larhs.toString();
-              String length = dastar.length.toString();
+              int larhs = dastar.larhs;
+              Length length = dastar.length;
               Color colour = dastar.colour;
-              return Container(
-                alignment: Alignment.center,
-                child: Text("Larhs: $larhs, Length: $length"),
-                decoration: BoxDecoration(
-                  color: colour,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              );
+              return DastarTile(larhs: larhs, length: length, colour: colour);
             });
       },
     );

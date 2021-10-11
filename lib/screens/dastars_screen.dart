@@ -18,7 +18,10 @@ class DastarsScreen extends StatelessWidget {
         },
         child: const Icon(Icons.add),
       ),
-      body: const DastarsGrid(),
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: const DastarsGrid(),
+      ),
     );
   }
 }
