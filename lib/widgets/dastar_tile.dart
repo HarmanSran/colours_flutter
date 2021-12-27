@@ -1,19 +1,6 @@
 import 'package:colours_flutter/models/dastar.dart';
 import 'package:flutter/material.dart';
 
-String getLengthCaption(Length length) {
-  switch (length) {
-    case Length.short:
-      return "Short";
-    case Length.medium:
-      return "Medium";
-    case Length.long:
-      return "Long";
-    default:
-      return "???";
-  }
-}
-
 class DastarTile extends StatelessWidget {
   const DastarTile({
     Key? key,

@@ -1,3 +1,4 @@
+import 'package:colours_flutter/screens/add_dastar_screen.dart';
 import 'package:colours_flutter/widgets/dastars_grid.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,10 @@ class DastarsScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print("TODO");
-          // https://pub.dev/packages/flutter_colorpicker
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => AddDastarScreen(),
+          );
         },
         child: const Icon(Icons.add),
       ),
